@@ -1,0 +1,28 @@
+{
+    "name": "assistants-trial",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "@deepstructure/sdk": "^0.15.1",
+        "openai": "^4.68.1",
+        "postgres": "^3.4.4",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@deepstructure/cli": "^0.4.76",
+        "@types/node": "^20",
+        "esbuild": "^0.20",
+        "typescript": "^5",
+        "vitest": "^2.0.5"
+    },
+    "scripts": {
+        "build": "ds build",
+        "deploy": "ds deploy",
+        "dev": "ds dev",
+        "login": "ds login",
+        "typecheck": "tsc --noEmit",
+        "test:chat-completions": "vitest run tests/chat-completions.test.ts"
+    },
+    "type": "module",
+    "module": "src/app.ts"
+}
