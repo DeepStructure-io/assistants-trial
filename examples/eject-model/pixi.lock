@@ -32,7 +32,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libxcrypt-4.4.36-h31becfc_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/libzlib-1.3.1-h68df207_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/ncurses-6.5-h0425590_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/openai-1.35.14-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/openai-1.39.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/openssl-3.3.1-h68df207_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.8.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pydantic-core-2.20.1-py312h3dd116e_0.conda
@@ -62,12 +62,13 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/httpx-0.27.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/hyperframe-6.0.1-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/idna-3.7-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/jiter-0.7.1-py312hcd83bfe_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libexpat-2.6.2-hebf3989_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libffi-3.4.2-h3422bc3_5.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libsqlite-3.46.0-hfb93653_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/libzlib-1.3.1-hfb2fe0b_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/ncurses-6.5-hb89a1cb_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/openai-1.35.14-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/openai-1.54.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/openssl-3.3.1-hfb2fe0b_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.8.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pydantic-core-2.20.1-py312h552d48e_0.conda
@@ -366,6 +367,25 @@ packages:
   size: 52718
   timestamp: 1713279497047
 - kind: conda
+  name: jiter
+  version: 0.7.1
+  build: py312hcd83bfe_0
+  subdir: osx-arm64
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/jiter-0.7.1-py312hcd83bfe_0.conda
+  sha256: 167b2c39315b69c5d360af580d173418434b384967f52ba24a21129fe70b724d
+  md5: ed63013406510d24934df8cdf74ea587
+  depends:
+  - __osx >=11.0
+  - python >=3.12,<3.13.0a0
+  - python >=3.12,<3.13.0a0 *_cpython
+  - python_abi 3.12.* *_cp312
+  constrains:
+  - __osx >=11.0
+  license: MIT
+  license_family: MIT
+  size: 258683
+  timestamp: 1731437660386
+- kind: conda
   name: ld_impl_linux-aarch64
   version: '2.40'
   build: h9fc2d93_7
@@ -596,13 +616,13 @@ packages:
   timestamp: 1715194898402
 - kind: conda
   name: openai
-  version: 1.35.14
+  version: 1.39.0
   build: pyhd8ed1ab_0
   subdir: noarch
   noarch: python
-  url: https://conda.anaconda.org/conda-forge/noarch/openai-1.35.14-pyhd8ed1ab_0.conda
-  sha256: 4c580969fa155cb87dec87408d517a991c1a5985b25ba5587ddf6d3f0b8ecbbd
-  md5: 83834019a4de415a16746b198219cfa7
+  url: https://conda.anaconda.org/conda-forge/noarch/openai-1.39.0-pyhd8ed1ab_0.conda
+  sha256: 8163781a48437d7edfee2a9f54713bbf5951e4cd67ca5593076f715b45d34c7b
+  md5: 5d5fcdd9127ad1615acd00ee54548011
   depends:
   - anyio >=3.5.0,<5
   - distro >=1.7.0,<2
@@ -614,8 +634,32 @@ packages:
   - typing-extensions >=4.7,<5
   license: MIT
   license_family: MIT
-  size: 160359
-  timestamp: 1721113330699
+  size: 164190
+  timestamp: 1722887331551
+- kind: conda
+  name: openai
+  version: 1.54.4
+  build: pyhd8ed1ab_0
+  subdir: noarch
+  noarch: python
+  url: https://conda.anaconda.org/conda-forge/noarch/openai-1.54.4-pyhd8ed1ab_0.conda
+  sha256: 8e76eb6892a6f05527858f5cba2267f8240c88a35b01f2c1e8f46bc58f8ced7e
+  md5: 7e7292da81176424d0db5a61a930f923
+  depends:
+  - anyio >=3.5.0,<5
+  - distro >=1.7.0,<2
+  - httpx >=0.23.0,<1
+  - jiter >=0.4.0,<1
+  - pydantic >=1.9.0,<3
+  - python >=3.7.1
+  - sniffio
+  - tqdm >4
+  - typing-extensions >=4.11,<5
+  - typing_extensions >=4.11,<5
+  license: MIT
+  license_family: MIT
+  size: 186928
+  timestamp: 1731442270597
 - kind: conda
   name: openssl
   version: 3.3.1

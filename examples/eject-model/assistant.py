@@ -6,7 +6,8 @@ from util import ensure_vector_store, pretty_print, show_json, wait_on_run
 # client = OpenAI()
 client = OpenAI(
     api_key="sk-no-api-key-required",
-    base_url="https://assistants-demo-deepstructure-io.deepstructure.app/workflows/assistants/api",
+#    base_url="https://assistants-demo-deepstructure-io.deepstructure.app/workflows/assistants/api",
+    base_url="https://assistants-trial-prune.deepstructure.app/workflows/assistants/api",
     default_headers={"Authorization": "Basic dXNlcjpwYXNzd29yZA=="},
 )
 
@@ -22,7 +23,8 @@ class AssistantSpec:
 spec = AssistantSpec(
     name="ToolsBot",
     instructions="You are a helpful assistant.",
-    model="gpt-4o",
+    #model="gpt-4o",
+    model="anthropic/claude-3.5-sonnet",
     files=[
         "files/Bauer 6in Bench Grinder.docx",
         "files/Central Machinery 9in Bench Top Band Saw.pdf",

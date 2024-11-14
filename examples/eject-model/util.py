@@ -19,7 +19,7 @@ def wait_on_run(client, run, thread):
             thread_id=thread.id,
             run_id=run.id,
         )
-        time.sleep(0.5)
+        time.sleep(1)
     return run
 
 
