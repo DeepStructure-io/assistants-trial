@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "@deepstructure/sdk": "^0.15.1",
+        "@deepstructure/sdk": "^0.15.3",
         "openai": "^4.68.1",
         "postgres": "^3.4.4",
         "zod": "^3.23.8"

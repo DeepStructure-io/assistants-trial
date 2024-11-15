@@ -6,7 +6,7 @@ from util import ensure_vector_store, pretty_print, show_json, wait_on_run
 # client = OpenAI()
 client = OpenAI(
     api_key="sk-no-api-key-required",
-    base_url="https://assistants-demo-deepstructure-io.deepstructure.app/workflows/assistants/api",
+    base_url="https://<your-deepstructure-endpoint>/workflows/assistants/api",
     default_headers={"Authorization": "Basic dXNlcjpwYXNzd29yZA=="},
 )
 
